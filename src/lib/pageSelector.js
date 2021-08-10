@@ -15,8 +15,8 @@ export function createPageSelector(total, limit) {
     const store = writable(state)
 
     function nextPage() {
-        store.update(s => {
-            s.page = s.page < s.total ? s.page + 1 : s.page
+        store.update(s => {            
+            s.page = s.page * limit < s.total ? s.page + 1 : s.page
             s.startIndex = (s.page  - 1) * s.limit
             return s
         })
