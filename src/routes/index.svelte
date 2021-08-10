@@ -1,7 +1,9 @@
 <script>
     import { createPageSelector } from "$lib/pageSelector";
 
-    let { pageSelector, nextPage, previousPage } = createPageSelector(25, 4);
+    const { pageSelector, nextPage, previousPage } = createPageSelector(25, 4);
+
+    
 </script>
 
 <h1>Page Selector POC</h1>
